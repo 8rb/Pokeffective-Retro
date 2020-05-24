@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+@font-face{
+    font-family:'Minecraft';
+    src: url('Minecraft.woff') format('woff');
+}
+
+@font-face{
+    font-family:'Pokemon';
+    src: url('Pokemon-Classic.ttf') format('truetype');
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+    overflow-x: hidden; 
+}
+
+body{
+    overflow-y:scroll
+}
+
+body, article, h1, h2{
+    background-color: #7c7c7c !important;
+}
+
+
+.weakness-chart{
+    display: none;
+}
+
+h1{
+    color:#fffaf0;
+    font-size:16px;
+    text-align:center;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    margin-top: 0;
+    text-shadow:     6px  6px 0 #000,
+                    -2.5px -2.5px 0 #000,  
+                    2.5px -2.5px 0 #000,
+                    -2.5px  2.5px 0 #000,
+                    2.5px  2.5px 0 #000;
+}   
+
+.title{
+    font-size:3.5em;
+    font-weight:700;
+    list-style-type: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.magic-title{
+    display: none;
+}
+
+h2{
+    display:inline-block;
+    font-family: 'Minecraft';
+    color:#000000;
+    font-size:0.7em;
+    /*margin:0 0 0.5em;*/
+    padding-left:  10px;
+    padding-right: 10px;
+    position:absolute;
+    top:-0.75em;
+}
+
+h3{
+    display:inline-block;
+    font-family: 'Minecraft';
+    color:#000000;
+    font-size:0.5em;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    position:absolute;
+    top:-0.75em;
+    line-height: 100px;
+}
+
+h4{
+    display:inline-block;
+    font-family: 'Minecraft';
+    color:#000000;
+    padding-top: 10px;
+
+    position:absolute;
+    top:-0.75em;
+}
+
+.tagline {
+    display: inline-block;
+    width: 0;
+    line-height: 1.3;
+
+}
+.tagline h4 {
+    font-weight: normal;
+    display: inline;
+    padding-bottom: 50px;
+}
+
+span{
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.sel-type{
+    color:#000000;
+    list-style-type: none;
+}
+
+#selected-types {
+    height: 130px;
+}
+
+
+article{
+    width:64em;
+    padding:1.25em;
+    margin:1em auto
+}
+article section{
+    /*border:0.0625em solid #dedede;*/
+    padding:1.25em 1em 1em;
+    margin:0 0 1.25em;
+    position:relative
+}
+
+section{
+    /*border: none !important;*/
+  border: 6px solid red;
+  border-radius: 5px;
+
+}
+
+.sub-section{
+    border: none !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.sub-section2{
+    border: none !important;
+    padding-left: 190px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+table{
+    width:100%;
+    list-style-type: none;
+    color:#000000;
+    font-size:1em;
+    font-family: 'Pokemon';
+    /*padding-right: 45px;*/
+}
+
+#weak_list{
+    /*padding-right: 20px;*/
+}
+
+ul.type-result li {
+    display:inline;
+    list-style-type: none;
+    margin-bottom: 0;
+    color:#000000;
+    font-size:0.9em;
+    font-family: 'Pokemon';
+    padding-right: 45px;
+}
+
+.type-result{
+
+}
+
+.btn-group button {
+  background-color: #4CAF50;
+  border: 1px solid green;
+  color: white;
+  padding: 50px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+.button{
+    color:#000000;
+    font-size:0.9em;
+    font-family: 'Pokemon';
+    text-shadow:     1px  1px 0 #000,
+                     1px  1px 0 #000,
+                     1px  1px 0 #000;
+
+
+    text-align:center;
+    display:inline-block;
+    padding:.2em .5em;
+    /*border-radius: 12px;*/
+    cursor:pointer;
+    position:absolute;
+    width:140px;
+    height: 50px;
+}
+
+.sub-title{
+    color:#000000;
+    font-size:1.5em;
+    font-family: 'Minecraft';
+    text-align:center;
+}
+
+.sub-title2{
+    color:#000000;
+    font-size:1.5em;
+    font-family: 'Minecraft';
+    text-align:center;
+    left-padding: 70px;
+    right-padding: 70px;
+}
+
+.divider{
+    width:150px;
+    height: 60px;
+    display:inline-block;
+}
+
+.small_divider{
+    width: 20px;
+    height: 60px;
+    display:inline-block;
+}
+
+.text_divider{
+    height:30px;
+    width: 20px;
+    display:inline-block;
+}
+
+.narrow_divider{
+    width: 30px;
+    height: 20px;
+    display:inline-block;
+}
+
+.button:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(1.5px);
+  outline:0;
+}
+
+button:focus {outline:0 !important;}
+
+/*BUG*/
+.button-bug{
+    background-color:#59ff12;
+    border-color:#4e8234;
+}
+
+.button-bug:hover{
+    background:#3bc500;
+}
+
+.button-bug:active {
+  background-color: #2f9b00;
+  box-shadow: 0 3px #465f3c;
+}
+#bug{
+    color: #59ff12;
+}
+
+/*DARK*/
+.button-dark{
+    background-color:#525252;
+    border-color:#393939;
+}
+
+.button-dark:hover{
+    background:#454545;
+}
+
+.button-dark:active {
+  background-color: #2c2c2c;
+}
+#dark{
+    color: #525252;
+}
+/*DRAGON*/
+.button-dragon{
+    background-color:#5229b6;
+    border-color:#2d1662;
+}
+
+.button-dragon:hover{
+    background:#401f8c;
+}
+
+.button-dragon:active {
+  background-color: #361b77;
+}
+#dragon{
+    color: #2d1662;
+}
+/*ELECTRIC*/
+.button-electric{
+    background-color:#ffff00;
+    border-color:#e6e600;
+}
+
+.button-electric:hover{
+    background:#cccc00;
+}
+
+.button-electric:active {
+  background-color: #cccc00;
+}
+#electric{
+    color: #ffff00;
+}
+/*FAIRY*/
+.button-fairy{
+    background-color:#ff33ff;
+    border-color:#e400e4;
+}
+
+.button-fairy:hover{
+    background:#e400e4;
+}
+
+.button-fairy:active {
+  background-color: #e400e4;
+}
+#fairy{
+    color: #ff33ff;
+}
+/*FIGHTING*/
+.button-fighting{
+    background-color:#cc3636;
+    border-color:#b92f2f;
+}
+
+.button-fighting:hover{
+    background:#a52a2a;
+}
+
+.button-fighting:active {
+  background-color: #a52a2a;
+}
+#fighting{
+    color: #a52a2a;
+}
+/*FIRE*/
+.button-fire{
+    background-color:#ff5000;
+    border-color:#ff3b00;
+}
+
+.button-fire:hover{
+    background:#cc4000;
+}
+
+.button-fire:active {
+  background-color: #cc4000;
+}
+#fire{
+    color: #ff5000;
+}
+/*FLYING*/
+.button-flying{
+    background-color:#3dffff;
+    border-color:#00b3b3;
+}
+
+.button-flying:hover{
+    background:#00b3b3;
+}
+
+.button-flying:active {
+  background-color: #00b3b3;
+}
+#flying{
+    color: #3dffff;
+}
+/*GHOST*/
+.button-ghost{
+    background-color:#a292bc;
+    border-color:#9582b2;
+}
+
+.button-ghost:hover{
+    background:#8772a9;
+}
+
+.button-ghost:active {
+  background-color: #8772a9;
+}
+#ghost{
+    color: #a292bc;
+}
+/*grass*/
+.button-grass{
+    background-color:#09dd09;
+    border-color:#08c408;
+}
+
+.button-grass:hover{
+    background:#07ac07;
+}
+
+.button-grass:active {
+  background-color: #07ac07;
+}
+#grass{
+    color: #09dd09;
+}
+/*ground*/
+.button-ground{
+    background-color:#cc8236;
+    border-color:#b9752f;
+}
+
+.button-ground:hover{
+    background:#a5682a;
+}
+
+.button-ground:active {
+  background-color: #a5682a;
+}
+#ground{
+    color: #cc8236;
+}
+/*ice*/
+.button-ice{
+    background-color:#0bffff;
+    border-color:#32ffff;
+}
+
+.button-ice:hover{
+    background:#00d7d7;
+}
+
+.button-ice:active {
+  background-color: #00d7d7;
+}
+#ice{
+    color: #0bffff;
+}
+/*normal*/
+.button-normal{
+    background-color:#fffaf0;
+    border-color:#fff2d7;
+}
+
+.button-normal:hover{
+    background:#cecece;
+}
+
+.button-normal:active {
+  background-color: #cecece;
+}
+#normal{
+    color: #fffaf0;
+}
+/*poison*/
+.button-poison{
+    background-color:#9a009a;
+    border-color:#800080;
+}
+
+.button-poison:hover{
+    background:#800080;
+}
+
+.button-poison:active {
+  background-color: #800080;
+}
+#poison{
+    color: #9a009a;
+}
+/*psychic*/
+.button-psychic{
+    background-color:#f700f7;
+    border-color:#dd00dd;
+}
+
+.button-psychic:hover{
+    background:#c400c4;
+}
+
+.button-psychic:active {
+  background-color: #c400c4;
+}
+#psychic{
+    color: #f700f7;
+}
+/*rock*/
+.button-rock{
+    background-color:#8b4513;
+    border-color:#753a10;
+}
+
+.button-rock:hover{
+    background:#5e2f0d;
+}
+
+.button-rock:active {
+  background-color: #5e2f0d;
+}
+#rock{
+    color: #8b4513;
+}
+/*steel*/
+.button-steel{
+    background-color:#adadad;
+    border-color:#878787;
+}
+
+.button-steel:hover{
+    background:#878787;
+}
+
+.button-steel:active {
+  background-color: #878787;
+}
+#steel{
+    color: #adadad;
+}
+/*water*/
+.button-water{
+    background-color:#0483ff;
+    border-color:#006ad1;
+}
+
+.button-water:hover{
+    background:#006ad1;
+}
+
+.button-water:active {
+  background-color: #006ad1;
+}
+#water{
+    color: #0483ff;
+}
+/*reset*/
+.button-reset{
+    position: absolute;
+    left: 83%;
+    top: 30px;
+    background-color:red;
+    border-color:darkred;
+}
+
+.button-reset:hover{
+    background:darkred;
+}
+
+.button-reset:active {
+  background-color: darkred;
+}
+
+#poke-type{
+    color: red;
+}
+
