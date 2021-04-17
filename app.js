@@ -9,6 +9,27 @@ $(document).ready(function() {
 
 	var types = ["BUG", "DARK", "DRAGON", "ELECTRIC", "FAIRY", "FIGHTING", "FIRE", "FLYING", "GHOST", "GRASS", "GROUND", "ICE", "NORMAL", "POISON", "PSYCHIC", "ROCK", "STEEL", "WATER"];
 
+	var typesDict = {
+		"bug": 0,
+		"dark": 1,
+		"dragon": 2,
+		"electric": 3,
+		"fairy": 4,
+		"fighting": 5,
+		"fire": 6,
+		"flying": 7,
+		"ghost": 8,
+		"grass": 9,
+		"ground": 10,
+		"ice": 11,
+		"normal": 12,
+		"poison": 13,
+		"psychic": 14,
+		"rock": 15,
+		"steel": 16,
+		"water": 17,
+	  };
+
 	var effects = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 	var x0    = [];
@@ -62,349 +83,96 @@ $(document).ready(function() {
 	];
 
 	$('.button-bug').click(function(){
-
-		if(type1 == empty){
-			type1 = types[0];
-			$('#type1').html(types[0]);
-			$('#type1').css("color", "#59ff12");
-			type1_index = 0;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[0]){
-			type2 = types[0];
-			$('#type2').html(types[0]);
-			$('#type2').css("color", "#59ff12");
-			type2_index = 0;
-			calculate();
-		}
-
+		addType('bug');
+		calculate();
 	})
 
 	$('.button-dark').click(function(){
-
-		if(type1 == empty){
-			type1 = types[1];
-			$('#type1').html(types[1]);
-			type1_index = 1;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[1]){
-			type2 = types[1];
-			$('#type2').html(types[1]);
-			type2_index = 1;
-			calculate();
-		}
-
+		addType('dark');
+		calculate();
 	})
 
 	$('.button-dragon').click(function(){
-
-		if(type1 == empty){
-			type1 = types[2];
-			$('#type1').html(types[2]);
-			$('#type1').css("color", "#2d1662");
-			type1_index = 2;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[2]){
-			type2 = types[2];
-			$('#type2').html(types[2])
-			$('#type2').css("color", "#2d1662");
-			type2_index = 2;
-			calculate();
-		}
-
+		addType('dragon');
+		calculate();
 	})
 
 	$('.button-electric').click(function(){
-
-		if(type1 == empty){
-			type1 = types[3];
-			$('#type1').html(types[3]);
-			$('#type1').css("color", "#ffff00");
-			type1_index = 3;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[3]){
-			type2 = types[3];
-			$('#type2').html(types[3]);
-			$('#type2').css("color", "#ffff00");
-			type2_index = 3;
-			calculate();
-		}
-
+		addType('electric');
+		calculate();
 	})
 
 	$('.button-fairy').click(function(){
-
-		if(type1 == empty){
-			type1 = types[4];
-			$('#type1').html(types[4]);
-			$('#type1').css("color", "#ff33ff");
-			type1_index = 4;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[4]){
-			type2 = types[4];
-			$('#type2').html(types[4]);
-			$('#type2').css("color", "#ff33ff");
-			type2_index = 4;
-			calculate();
-		}
-
+		addType('fairy');
+		calculate();
 	})
 
 	$('.button-fighting').click(function(){
-
-		if(type1 == empty){
-			type1 = types[5];
-			$('#type1').html(types[5]);
-			$('#type1').css("color", "#a52a2a");
-			type1_index = 5;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[5]){
-			type2 = types[5];
-			$('#type2').html(types[5]);
-			$('#type2').css("color", "#a52a2a");
-			type2_index = 5;
-			calculate();
-		}
-
+		addType('fighting');
+		calculate();
 	})
 
 	$('.button-fire').click(function(){
-
-		if(type1 == empty){
-			type1 = types[6];
-			$('#type1').html(types[6]);
-			$('#type1').css("color", "#ff5000");
-			type1_index = 6;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[6]){
-			type2 = types[6];
-			$('#type2').html(types[6]);
-			$('#type2').css("color", "#ff5000");
-			type2_index = 6;
-			calculate();
-		}
-
+		addType('fire');
+		calculate();
 	})
 
 	$('.button-flying').click(function(){
-
-		if(type1 == empty){
-			type1 = types[7];
-			$('#type1').html(types[7]);
-			$('#type1').css("color", "#3dffff");
-			type1_index = 7;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[7]){
-			type2 = types[7];
-			$('#type2').html(types[7]);
-			$('#type2').css("color", "#3dffff");
-			type2_index = 7;
-			calculate();
-		}
-
+		addType('flying');
+		calculate();
 	})
 
 	$('.button-ghost').click(function(){
-
-		if(type1 == empty){
-			type1 = types[8];
-			$('#type1').html(types[8]);
-			$('#type1').css("color", "#a292bc");
-			type1_index = 8;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[8]){
-			type2 = types[8];
-			$('#type2').html(types[8]);
-			$('#type2').css("color", "#a292bc");
-			type2_index = 8;
-			calculate();
-		}
-
+		addType('ghost');
+		calculate();
 	})
 
 	$('.button-grass').click(function(){
-
-		if(type1 == empty){
-			type1 = types[9];
-			$('#type1').html(types[9]);
-			$('#type1').css("color", "#09dd09");
-			type1_index = 9;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[9]){
-			type2 = types[9];
-			$('#type2').html(types[9]);
-			$('#type2').css("color", "#09dd09");
-			type2_index = 9;
-			calculate();
-		}
-
+		addType('grass');
+		calculate();
 	})
 
 	$('.button-ground').click(function(){
-
-		if(type1 == empty){
-			type1 = types[10];
-			$('#type1').html(types[10]);
-			$('#type1').css("color", "#cc8236");
-			type1_index = 10;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[10]){
-			type2 = types[10];
-			$('#type2').html(types[10]);
-			$('#type2').css("color", "#cc8236");
-			type2_index = 10;
-			calculate();
-		}
-
+		addType('ground');
+		calculate();
 	})
 
 	$('.button-ice').click(function(){
-
-		if(type1 == empty){
-			type1 = types[11];
-			$('#type1').html(types[11]);
-			$('#type1').css("color", "#0bffff");
-			type1_index = 11;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[11]){
-			type2 = types[11];
-			$('#type2').html(types[11]);
-			$('#type2').css("color", "#0bffff");
-			type2_index = 11;
-			calculate();
-		}
-
+		addType('ice');
+		calculate();
 	})
 
 	$('.button-normal').click(function(){
-
-		if(type1 == empty){
-			type1 = types[12];
-			$('#type1').html(types[12]);
-			$('#type1').css("color", "#fffaf0");
-			type1_index = 12;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[12]){
-			type2 = types[12];
-			$('#type2').html(types[12]);
-			$('#type2').css("color", "#fffaf0");
-			type2_index = 12;
-			calculate();
-		}
-
+		addType('normal');
+		calculate();
 	})
 
 	$('.button-poison').click(function(){
-
-		if(type1 == empty){
-			type1 = types[13];
-			$('#type1').html(types[13]);
-			$('#type1').css("color", "#9a009a");
-			type1_index = 13;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[13]){
-			type2 = types[13];
-			$('#type2').html(types[13]);
-			$('#type2').css("color", "#9a009a");
-			type2_index = 13;
-			calculate();
-		}
-
+		addType('poison');
+		calculate();
 	})
 
 	$('.button-psychic').click(function(){
-
-		if(type1 == empty){
-			type1 = types[14];
-			$('#type1').html(types[14]);
-			$('#type1').css("color", "#f700f7");
-			type1_index = 14;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[14]){
-			type2 = types[14];
-			$('#type2').html(types[14]);
-			$('#type2').css("color", "#f700f7");
-			type2_index = 14;
-			calculate();
-		}
-
+		addType('psychic');
+		calculate();
 	})
 
 	$('.button-rock').click(function(){
-
-		if(type1 == empty){
-			type1 = types[15];
-			$('#type1').html(types[15]);
-			$('#type1').css("color", "#8b4513");
-			type1_index = 15;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[15]){
-			type2 = types[15];
-			$('#type2').html(types[15]);
-			$('#type2').css("color", "#8b4513");
-			type2_index = 15;
-			calculate();
-		}
-
+		addType('rock');
+		calculate();
 	})
 
 	$('.button-steel').click(function(){
-
-		if(type1 == empty){
-			type1 = types[16];
-			$('#type1').html(types[16]);
-			$('#type1').css("color", "#adadad");
-			type1_index = 16;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[16]){
-			type2 = types[16];
-			$('#type2').html(types[16]);
-			$('#type2').css("color", "#adadad");
-			type2_index = 16;
-			calculate();
-		}
-
+		addType('steel');
+		calculate();
 	})
 
 	$('.button-water').click(function(){
-
-		if(type1 == empty){
-			type1 = types[17];
-			$('#type1').html(types[17]);
-			$('#type1').css("color", "#0483ff");
-			type1_index = 17;
-			calculate();
-		}
-		else if(type2 == empty && type1 != types[17]){
-			type2 = types[17];
-			$('#type2').html(types[17]);
-			$('#type2').css("color", "#0483ff");
-			type2_index = 17;
-			calculate();
-		}
-
+		addType('water');
+		calculate();
 	})
 
-
-
 	$('.button-reset').click(function(){
-
 		type1_index = -1;
 		type2_index = -1;
 		type1 = empty;
@@ -417,16 +185,35 @@ $(document).ready(function() {
 		title.fadeOut(200);
 		clear_lists();
 		clear_html_lists();
-		$('#type1').css("color", "#000000");
-		$('#type2').css("color", "#000000");
+		$("#type1").removeClass();
+		$("#type2").removeClass();
 	})
 
+	const addType = (typeName) => {
+		type_index = typesDict[typeName];
+		if(type1 == empty){
+			type1_index = type_index;
+			type1 = typeName.toUpperCase();
+			$('#type1').html(type1);
+			$('#type1').removeClass();
+			$('#type1').addClass("type-name")
+			$('#type1').addClass(typeName)
+		}
+		else if(type2 == empty && type1 != types[type_index]){
+			type2_index = type_index;
+			type2 = typeName.toUpperCase();
+			$('#type2').html(type2);
+			$('#type2').removeClass();
+			$('#type2').addClass("type-name")
+			$('#type2').addClass(typeName)
+		}
+	}
 
-	function calculate() {
+	const calculate = () => {
 		var weak_list = $("#weakness-chart");
 
   		var title = $("#magic-title");
-  		if(type2 == empty){ //just one type
+  		if(type2 == empty) { //just one type
   			var i;
   			for(i = 0; i < 18; i++){
   				effects[i] = type_chart[i][type1_index]/2;
@@ -435,28 +222,24 @@ $(document).ready(function() {
   			add_html_lists();
   			title.hide(100);
   		}
-  		else{
-
+  		else {
   			clear_lists();
   			clear_html_lists();
   			for(var i = 0; i < 18; i++){
   				effects[i] = type_chart[i][type1_index]*type_chart[i][type2_index]/4;
   			}
-
   			add_lists();
   			add_html_lists();
   			document.querySelector('#weakness-chart').scrollIntoView({ 
-  				behavior: 'smooth' 
+  				behavior: 'smooth'
 			});
   		}
   		weak_list.slideDown();
   		title.show(700);
-
 	}
 
-	function add_lists(){
-		var i;
-		for(i  = 0; i < 18; i++){
+	const add_lists = () => {
+		for(let i = 0; i < 18; i++){
 			if(effects[i] == 0){
 				x0.push(types[i]);
 			}
@@ -478,7 +261,7 @@ $(document).ready(function() {
 		}
 	}
 
-	function clear_lists(){
+	const clear_lists = () => {
 		x0.length = 0;
 		x1.length = 0;
 		x2.length = 0;
@@ -491,146 +274,53 @@ $(document).ready(function() {
 		string_inmu.length = 0;
 	}
 
-	function add_html_lists(){
+	const add_html_lists = () => {
 
-	for(var i = 0; i < x4.length; i++){
-		string_weak.push("X4 " + x4[i]);
+		for(var i = 0; i < x4.length; i++){
+			string_weak.push("X4 " + x4[i]);
+		}
+
+		for(var i = 0; i < x2.length; i++){
+			string_weak.push("X2 " + x2[i]);
+		}
+
+		for(var i = 0; i < x0_25.length; i++){
+			string_res.push("X0.25 " + x0_25[i]);
+		}
+
+		for(var i = 0; i < x0_5.length; i++){
+			string_res.push("X0.5 " + x0_5[i]);
+		}
+
+		for(var i = 0; i < x1.length; i++){
+			string_norm.push("X1 " + x1[i]);
+		}
+
+		for(var i = 0; i < x0.length; i++){
+			string_inmu.push("X0 " + x0[i]);
+		}
+
+		add_format_html(string_norm, "#norm_list");
+		add_format_html(string_res, "#res_list");
+		add_format_html(string_weak, "#weak_list");
+		add_format_html(string_inmu, "#inmu_list");
 	}
 
-	for(var i = 0; i < x2.length; i++){
-		string_weak.push("X2 " + x2[i]);
-	}
-
-	add_format_html(string_weak, "#weak_list");
-
-	for(var i = 0; i < x0_25.length; i++){
-		string_res.push("X0.25 " + x0_25[i]);
-	}
-
-	for(var i = 0; i < x0_5.length; i++){
-		string_res.push("X0.5 " + x0_5[i]);
-	}
-
-	add_format_html(string_res, "#res_list");
-
-
-	for(var i = 0; i < x1.length; i++){
-		string_norm.push("X1 " + x1[i]);
-	}
-
-	add_format_html(string_norm, "#norm_list");
-
-	for(var i = 0; i < x0.length; i++){
-		string_inmu.push("X0 " + x0[i]);
-	}
-
-	add_format_html(string_inmu, "#inmu_list");
-
-
-	add_color();
-
-	}
-
-	function clear_html_lists(){
+	const clear_html_lists = () => {
 		$('#weak_list').empty()
 		$('#norm_list').empty();
 		$('#res_list').empty();
 		$('#inmu_list').empty();
 	}
 
-	function add_color(){
-
+	const add_format_html = (string_arr, list_id) => {
+		string_arr.forEach(type => {
+			let className = add_type(type);
+			let string_add = '<p class="' + className + '">' + type + '</p>';
+			$(list_id).append(string_add);
+		});
 	}
-
-	function add_format_html(string_arr, table_name){
-			var cont = 0;
-			var string_add = "";
-	for(var i = 0; i < string_arr.length; i++){
-
-		var id = add_id(string_arr[i]);
-
-		if(cont == 0 && i + 1 != string_arr.length){
-			string_add = "<tr>" + '<td id="' + id + '">' + string_arr[i] + "</td>";
-			cont++;
-		}
-		else if(cont == 0 && i + 1 == string_arr.length){
-			string_add = "<tr>" + '<td id="' + id + '">' + string_arr[i] + "</td> </tr>";
-			$(table_name).append(string_add);
-			cont=0;
-			string_add = "";
-		}
-		else if(cont == 1 && i + 1 != string_arr.length || cont == 1 && i + 1 != string_arr.length){
-			string_add+='<td id="' + id + '">' + string_arr[i] +"</td>";
-  			cont++;
-		}
-		else if(cont == 2 || i + 1 == string_arr.length){
-			string_add+= '<td id="' + id + '">' + string_arr[i] + "</td> </tr>";
-			$(table_name).append(string_add);
-			cont=0;
-			string_add = "";
-		}
+	const add_type = (string_type) => {
+		return string_type.toLowerCase()	
 	}
-
-	}
-
-	function add_id(string_type){
-		if(string_type.includes("BUG")){
-			return "bug";
-		}
-		if(string_type.includes("DARK")){
-			return "dark";
-		}
-		if(string_type.includes("DRAGON")){
-			return "dragon";
-		}
-		if(string_type.includes("ELECTRIC")){
-			return "electric";
-		}
-		if(string_type.includes("FAIRY")){
-			return "fairy";
-		}
-		if(string_type.includes("FIGHTING")){
-			return "fighting";
-		}
-		if(string_type.includes("FIRE")){
-			return "fire";
-		}
-		if(string_type.includes("FLYING")){
-			return "flying";
-		}
-		if(string_type.includes("GHOST")){
-			return "ghost";
-		}
-		if(string_type.includes("GRASS")){
-			return "grass";
-		}
-		if(string_type.includes("GROUND")){
-			return "ground";
-		}
-		if(string_type.includes("ICE")){
-			return "ice";
-		}
-		if(string_type.includes("NORMAL")){
-			return "normal";
-		}
-		if(string_type.includes("POISON")){
-			return "poison";
-		}
-		if(string_type.includes("PSYCHIC")){
-			return "psychic";
-		}
-		if(string_type.includes("ROCK")){
-			return "rock";
-		}
-		if(string_type.includes("STEEL")){
-			return "steel";
-		}
-		if(string_type.includes("WATER")){
-			return "water";
-		}
-		else{
-			return "unknown-type";
-		}
-	}
-
 });

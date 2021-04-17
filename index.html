@@ -5,133 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokeffective</title>
-    <link rel="shortcut icon" href="pokeball icon.ico" />
-    <link href="style.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/assets/poke_retro.png" />
+    <link href="styles.css" rel="stylesheet">
+    <link href="types.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </head>
-
 <body>
-<article id="types">
     <h1 title="POKEFFECTIVE" class="title">POKEFFECTIVE</h1>
-    <section id="selected-types">
-        <h2> SELECTED TYPES </h2>
-        <ol class="types-names">
-            <li class="sel-type">
-            <a class="sub-title">Type 1:</a> 
-            <div class="text_divider"></div>
-            <a id="type1" class="sub-title2"> </a> 
-            </li>
-            <li class="sel-type">
-            <a class="sub-title">Type 2:</a> 
-            <div class="text_divider"></div>
-            <a id="type2" class="sub-title2"> </a> 
-            </li>
-        </ol>
-        <div class="btn-group4">
-            <button class="button button-reset">RESET</button>
-        </div>
-    </section>
-    <div class="narrow_divider"></div>
-    <section id="all-types">
-        <h2> POKEMON TYPES </h2>
-        <div class="narrow_divider"></div>
-        <div class="btn-group1">
-            <div class="small_divider"></div>
-            <button class="button button-bug">BUG</button>
-            <div class="divider"></div>
-            <button class="button button-dark">DARK</button>
-            <div class="divider"></div>
-            <button class="button button-dragon">DRAGON</button>
-            <div class="divider"></div>
-            <button class="button button-electric">ELECTRIC</button>
-            <div class="divider"></div>
-            <button class="button button-fairy">FAIRY</button>
-            <div class="divider"></div>
-            <button class="button button-fighting">FIGHTING</button>
-        </div>
-        <div class="btn-group2">
-            <div class="small_divider"></div>
-            <button class="button button-fire">FIRE</button>
-            <div class="divider"></div>
-            <button class="button button-flying">FLYING</button>
-            <div class="divider"></div>
-            <button class="button button-ghost">GHOST</button>
-            <div class="divider"></div>
-            <button class="button button-grass">GRASS</button>
-            <div class="divider"></div>
-            <button class="button button-ground">GROUND</button>
-            <div class="divider"></div>
-            <button class="button button-ice">ICE</button>
-        </div>
-        <div class="btn-group3">
-            <div class="small_divider"></div>
-            <button class="button button-normal">NORMAL</button>
-            <div class="divider"></div>
-            <button class="button button-poison">POISON</button>
-            <div class="divider"></div>
-            <button class="button button-psychic">PSYCHIC</button>
-            <div class="divider"></div>
-            <button class="button button-rock">ROCK</button>
-            <div class="divider"></div>
-            <button class="button button-steel">STEEL</button>
-            <div class="divider"></div>
-            <button class="button button-water">WATER</button>
-        </div>
-    </section>
-    <div class="narrow_divider"></div>
-    <section class="weakness-chart" id="weakness-chart">
-        <h2 id="magic-title"> WEAKNESSES AND RESISTANCES</h2>
-        <section class="sub-section">
-            <h3>Weaknesses:</h3>
-            <section class="sub-section2">
-            <table class="type-result" id="weak_list">
-
-            </table>
-            </section>
+    <div id="types" class="main-content">
+        <section id="selected-types">
+            <h2 class="section-title">SELECTED TYPES</h2>
+            <div class="selected-content">
+                <div class="left-col-selected-types">
+                    <div class="selected-type1-row">
+                        <p class="type-title">Type 1:</p>
+                        <p id="type1" class="type-name"></p>
+                    </div>
+                    <div class="selected-type2-row">
+                        <p class="type-title">Type 2:</p>
+                        <p id="type2" class="type-name"></p>
+                    </div>
+                </div>
+                <div class="right-col-selected-types">
+                    <button class="button button-reset">RESET</button>
+                </div>
+            </div>
         </section>
-        <div class="narrow_divider"></div>
-        <section class="sub-section">
-            <h3>Resistances:</h3>
-            <section class="sub-section2">
-            <table class="type-result" id="res_list">
-
-
-            </table>
-            </section>
+        <section id="all-types">
+            <h2 class="section-title">POKEMON TYPES</h2>
+            <div class="btn-group">
+                <button class="button button-bug">BUG</button>
+                <button class="button button-dark">DARK</button>
+                <button class="button button-dragon">DRAGON</button>
+                <button class="button button-electric">ELECTRIC</button>
+                <button class="button button-fairy">FAIRY</button>
+                <button class="button button-fighting">FIGHTING</button>
+                <button class="button button-fire">FIRE</button>
+                <button class="button button-flying">FLYING</button>
+                <button class="button button-ghost">GHOST</button>
+                <button class="button button-grass">GRASS</button>
+                <button class="button button-ground">GROUND</button>
+                <button class="button button-ice">ICE</button>
+                <button class="button button-normal">NORMAL</button>
+                <button class="button button-poison">POISON</button>
+                <button class="button button-psychic">PSYCHIC</button>
+                <button class="button button-rock">ROCK</button>
+                <button class="button button-steel">STEEL</button>
+                <button class="button button-water">WATER</button>
+            </div>
         </section>
-        <div class="narrow_divider"></div>
-        <section class="sub-section">
-            <h4 class="tagline"><span>Normal Damage:</span></h4>
-            <section class="sub-section2">
-            <table class="type-result" id="norm_list">
-
-
-            </table>
-            </section>
-        </section >
-        <div class="narrow_divider"></div>
-        <section class="sub-section">
-            <h3>Inmunities:</h3>
-            <section class="sub-section2">
-            <table class="type-result" id="inmu_list">
-
-
-            </table>
-            </section>
+        <section class="weakness-chart" id="weakness-chart">
+            <h2 id="magic-title" class="section-title">WEAKNESSES AND RESISTANCES</h2>
+            <div>
+                <h3 class="effect-title">Weaknesses:</h3>
+                <div class="type-result" id="weak_list">
+                </div>
+            </div>
+            <div>
+                <h3 class="effect-title">Resistances:</h3>
+                <div class="type-result" id="res_list">
+                </div>
+            </div>
+            <div>
+                <h3 class="effect-title">Normal Damage:</h3>
+                <div class="type-result" id="norm_list">
+                </div>
+            </div>
+            <div>
+                <h3 class="effect-title">Inmunities:</h3>
+                <div class="type-result" id="inmu_list">
+                </div>
+            </div>
         </section>
-    </section>
-    <footer>
-        8rb Studios All rights reserved.
-    </footer>
-</article>
-
-
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous">
-  </script>
-  <script src="app.js"></script>
+        <footer>
+            <a class="creator-link" href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">Developed by: Rodrigo Ramirez</a>
+        </footer>
+    </div>
 </body>
 </html>

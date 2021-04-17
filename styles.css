@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+@font-face{
+    font-family:'Minecraft';
+    src: url('/assets/Minecraft.woff') format('woff');
+}
+
+@font-face{
+    font-family:'Pokemon';
+    src: url('/assets/Pokemon-Classic.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #888888;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2c2c2c;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+}
+
+:root {
+    --bg-color: #888888;
+}
+
+* {
+    margin: 0;
+    font-family: 'Minecraft';
+}
+
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #0A4C95 #C2D2E4;
+}
+
+html {
+    max-width: 100vw;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    max-width: 100vw;
+    overflow-y: scroll;
+    background: var(--bg-color);
+    color: #000000;
+}
+
+.main-content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10vw;
+    min-width: 370px;
+}
+
+@media screen and (max-width: 600px) {
+    .main-content {
+        padding: 0 3vw;
+        min-width: 370px;
+    }
+}
+
+#selected-types, #all-types {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%
+}
+
+.weakness-chart {
+    display: none;
+    max-width: 100%;
+}
+
+.selected-content {
+    display: flex;
+}
+
+.left-col-selected-types {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-col-selected-types {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.selected-type1-row, .selected-type2-row {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .selected-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-col-selected-types {
+        width: 100%;
+    }
+    .right-col-selected-types {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section {
+    box-sizing: border-box;
+    max-width: 100vw;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    border: 6px solid red;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: calc(30px + 2.5vw);
+    font-weight: 700;
+    font-family: 'Press Start 2P', cursive;
+    color:#ffffff;
+    text-align:center;
+    margin: 2rem 2vw 0rem 2vw;
+    text-shadow:     
+    6px  6px 0 #000,
+    -2.5px -2.5px 0 #000,  
+    2.5px -2.5px 0 #000,
+    -2.5px  2.5px 0 #000,
+    2.5px  2.5px 0 #000;
+    transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: calc(16px + 3.5vw);
+        margin: 2rem 2vw .5rem 2vw;
+    }
+}
+
+.type-title {
+    font-size: 1.5rem;
+}
+
+.type-name {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 1rem 0; 
+}
+
+.magic-title {
+    display: none;
+}
+
+.type-result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    padding: 1.5rem .25rem;
+}
+
+.type-result p {
+    font-family: 'Pokemon';
+}
+
+.effect-title {
+    font-size: 1.8rem;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1rem;
+}
+
+.button {
+    font-size: 0.9em;
+    font-family: 'Pokemon';
+    text-shadow:     
+    1px  1px 0 #000,
+    1px  1px 0 #000,
+    1px  1px 0 #000;
+    text-align: center;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    height: 50px;
+    transition: all .05s ease-in-out;
+}
+
+.button:active {
+  box-shadow: 0 3px #666;
+  transform: translateY(1.5px);
+  outline: 0;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+footer {
+    height: 5vh;
+}
+
+.creator-link {
+    text-decoration: none;
+    color: #000000;
+    transition: all .2s ease-in-out;
+}
+
+.creator-link:hover {
+    opacity: .5;
+}
