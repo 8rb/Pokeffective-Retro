@@ -2,12 +2,12 @@
 
 @font-face{
     font-family:'Minecraft';
-    src: url('/assets/Minecraft.woff') format('woff');
+    src: url('assets/Minecraft.woff') format('woff');
 }
 
 @font-face{
     font-family:'Pokemon';
-    src: url('/assets/Pokemon-Classic.ttf') format('truetype');
+    src: url('assets/Pokemon-Classic.ttf') format('truetype');
 }
 
 ::-webkit-scrollbar {
